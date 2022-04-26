@@ -1,0 +1,36 @@
+<script>
+
+    function pulaLinha() {
+    
+        document.write("<br>");
+        document.write("<br>");
+    }
+    
+    function mostra(mensagem) {
+    
+        document.write(mensagem);
+        pulaLinha();
+    }
+
+    function sorteio(n) {
+        return Math.round(Math.random () * n);
+    }
+
+    var numeroPensado = sorteio(10);
+    var chute = parseInt(prompt("Tente advinhar o número que aparecerá ma tela"));
+    
+
+    if(chute == numeroPensado) {
+        mostra("Parabens!Voce acertou." + numeroPensado);
+    } else {
+        mostra("Voce errou, o numero era: " + numeroPensado);
+    }
+    if(numeroPensado > chute) {
+        mostra("O numero que voce chutou é menor que o numero sorteado");
+
+    }
+    if(numeroPensado < chute) {
+        mostra("O numero que voce chutou é maior que o numero sorteado");
+    }
+
+    </script>
